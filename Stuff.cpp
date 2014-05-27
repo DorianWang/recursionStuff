@@ -445,20 +445,20 @@ int f12_R(int n, int A[], int arrayLength)
 double f13_I(double input)
 {
 double x = input;
-double output = 1 + 1/2 * (x-1) - 1/8 * (x-1)*(x-1) + 1/16 * (x-1)*(x-1)*(x-1)
-- 5/256 * (x-1)*(x-1)*(x-1)*(x-1) + 7/256 * (x-1)*(x-1)*(x-1)*(x-1)*(x-1);
+
+double smallValue = x - x/2;
+
+double output = 1 + 1/2 * (smallValue) - 1/8 * (smallValue)*(smallValue) + 1/16 * (smallValue)*(smallValue)*(smallValue)
+- 5/256 * (smallValue)*(smallValue)*(smallValue)*(smallValue) + 7/256 * (smallValue)*(smallValue)*(smallValue)*(smallValue)*(smallValue);
 //More magic may be added if required...
        
 int test = (int)(output + 0.5000);
 
-if ((test * test) == (int)input){
-   return (double)test;   
-}
 
 return output;
 }
    
-   
+double f13_R()
    
    
    
