@@ -448,7 +448,7 @@ double x = input;
 
 double smallValue = x - x/2;
 
-double output = 1 + 1/2 * (smallValue) - 1/8 * (smallValue)*(smallValue) + 1/16 * (smallValue)*(smallValue)*(smallValue)
+double output = smallValue + 1/2 * (smallValue) - 1/8 * (smallValue)*(smallValue) + 1/16 * (smallValue)*(smallValue)*(smallValue)
 - 5/256 * (smallValue)*(smallValue)*(smallValue)*(smallValue) + 7/256 * (smallValue)*(smallValue)*(smallValue)*(smallValue)*(smallValue);
 //More magic may be added if required...
        
